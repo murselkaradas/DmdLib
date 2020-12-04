@@ -25,6 +25,8 @@ ALP_DEVICE_REMOVED = 1012  # The specified ALP has been removed.
 ALP_NOT_CONFIGURED = 1013  # The onboard FPGA is unconfigured.
 ALP_LOADER_VERSION = 1014  # The function is not supported by this version of the driver file VlxUsbLd.sys.
 ALP_ERROR_POWER_DOWN = 1018  # waking up the DMD from PWR_FLOAT did not work (ALP_DMD_POWER_FLOAT)
+ALP_SDRAM_INIT = 1020	# SDRAM Initialization failed. */
+ALP_CONFIG_MISMATCH = 1021		#The device is not properly configured for a function call with the specified parameters */
 
 # ===== for ALP_DEV_STATE in _AlpDevInquire ======
 
@@ -48,9 +50,9 @@ ALP_AVAIL_MEMORY = 2003  # ALP on-board sequence memory available for further se
 #    allocation (_AlpSeqAlloc); number of binary pictures
 
 # ===== Temperatures. Data format: signed long with 1 LSB=1/256 deg C ===== 
-ALP_DDC_FPGA_TEMPERATURE = 2050  # V4100 Rev B: LM95231. External channel: DDC FPGAs Temperature Diode
-ALP_APPS_FPGA_TEMPERATURE = 2051  # V4100 Rev B: LM95231. External channel: Application FPGAs Temperature Diode
-ALP_PCB_TEMPERATURE = 2052  # V4100 Rev B: LM95231. Internal channel. "Board temperature"
+ALP_DDC_FPGA_TEMPERATURE = 2050  # DLPC410 / DLPC910 FPGAs Temperature Diode
+ALP_APPS_FPGA_TEMPERATURE = 2051  # Application FPGAs Temperature Diode 
+ALP_PCB_TEMPERATURE = 2052  # Board temperature. 
 
 # =====   _AlpDevControl - ControlTypes & ControlValues =====
 ALP_SYNCH_POLARITY = 2004  # Select frame synch output signal polarity
